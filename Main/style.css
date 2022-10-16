@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+main {
+    width: 82.1rem;
+    height: 33.6rem;
+    margin: 19.6rem auto 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Controls {
+    width: 32.1rem;
+    height: 21.3rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 5.8rem;
+}
+
+.time{
+    width: 32.1rem;
+    height: 14.8rem;
+    font-weight: 50.0rem;
+    font-size: 10.6rem;
+    line-height: 11.8rem;
+    color: #323238;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.buttons button {
+    font-family: 'Roboto';
+    margin: 1.7rem 1.4rem 0;
+    width: 4.8rem;
+    height: 4.8rem;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    
+}
+
+.Audios {
+    width: 30.8rem;
+    height: 33.6rem;
+}
+
+.Audios button {
+    width: 13.8rem;
+    height: 15.2rem;
+    margin-bottom: 3.2rem;
+    background: #E1E1E6;
+    border-radius: 2.4rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.Audios button:hover {
+    background: #02799D;
+}
+
+.Row-Up {
+    display: flex;
+    gap: 3.2rem;
+    
+}
+
+.Row-Down {
+    display: flex;
+    gap: 3.2rem;
+}
+
+/* buttons Hide */
+
+.Floresta.Hide {
+    display: none;
+    visibility: hidden;
+}
+
+.Chuva.Hide {
+    display: none;
+    visibility: hidden;
+}
+
+.Cafeteria.Hide {
+    display: none;
+    visibility: hidden;
+}
+
+.Lareira.Hide {
+    display: none;
+    visibility: hidden;
+}
+
+/* buttons On */
+
+
+.FlorestaUse.On{
+    background: #02799D;
+    display: block;
+    visibility: visible;
+    
+}
+.ChuvaUse.On{
+    display: block;
+    visibility: visible;
+    background: #02799D;
+}
+.CafeteriaUse.On{
+    display: block;
+    visibility: visible;
+    background: #02799D;
+}
+.LareiraUse.On{
+    display: block;
+    visibility: visible;
+    background: #02799D;
+}
+
+/* Buttons Off */
+.FlorestaUse{
+    display: none;
+    visibility: hidden;
+}
+.ChuvaUse{
+    display: none;
+    visibility: hidden;
+}
+.CafeteriaUse{
+    display: none;
+    visibility: hidden;
+}
+.LareiraUse{
+    display: none;
+    visibility: hidden;
+}
