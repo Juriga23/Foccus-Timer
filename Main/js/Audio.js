@@ -1,29 +1,17 @@
-export default function Audios ({
-    Floresta,
-    Chuva,
-    Cafeteria,
-    Lareira,
-    LareiraUse,
-    ChuvaUse,
-    FlorestaUse,
-    CafeteriaUse
-}){
+export default function Audios (){
     const ChuvaSound = new Audio('./Audios/Chuva.wav')
     const FlorestaSound = new Audio ('./Audios/Floresta.wav')
     const CafeteriaSound = new Audio ('./Audios/Cafeteria.wav')
     const LareiraSound = new Audio ('./Audios/Lareira.wav')
+    const TimeFinish = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
 
     const ChuvaAudio = {
         On() {
             ChuvaSound.loop = true
             ChuvaSound.play()
-            Chuva.classList.add("Hide")
-            ChuvaUse.classList.add("On")
         },
         Off() {
             ChuvaSound.pause()
-            Chuva.classList.remove("Hide")
-            ChuvaUse.classList.remove("On")
         }
     }
 
@@ -31,13 +19,9 @@ export default function Audios ({
         On() {
             FlorestaSound.loop = true
             FlorestaSound.play()
-            Floresta.classList.add("Hide")
-            FlorestaUse.classList.add("On")
         },
         Off() {
             FlorestaSound.pause()
-            Floresta.classList.remove("Hide")
-            FlorestaUse.classList.remove("On")
         }
     }
 
@@ -45,13 +29,9 @@ export default function Audios ({
         On() {
             CafeteriaSound.loop = true
             CafeteriaSound.play()
-            Cafeteria.classList.add("Hide")
-            CafeteriaUse.classList.add("On")
         },
         Off() {
             CafeteriaSound.pause()
-            Cafeteria.classList.remove("Hide")
-            CafeteriaUse.classList.remove("On")
         }
     }
 
@@ -59,13 +39,17 @@ export default function Audios ({
         On() {
             LareiraSound.loop = true
             LareiraSound.play()
-            Lareira.classList.add("Hide")
-            LareiraUse.classList.add("On")
         },
         Off() {
             LareiraSound.pause()
-            Lareira.classList.remove("Hide")
-            LareiraUse.classList.remove("On")
+        }
+    }
+
+    const TimeFinishAudio = {
+        On(){
+            TimeFinishAudio.loop = false
+            TimeFinish.play()
+
         }
     }
 
@@ -73,6 +57,7 @@ export default function Audios ({
         ChuvaAudio,
         FlorestaAudio,
         CafeteriaAudio,
-        LareiraAudio
+        LareiraAudio,
+        TimeFinishAudio
     }
 }

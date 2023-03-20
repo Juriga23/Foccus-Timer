@@ -9,6 +9,7 @@
     font-size: 62.5%;
 }
 
+
 main {
     width: 82.1rem;
     height: 33.6rem;
@@ -44,7 +45,7 @@ main {
     margin: 1.7rem 1.4rem 0;
     width: 4.8rem;
     height: 4.8rem;
-    border: 0;
+    border: none;
     background-color: white;
     cursor: pointer;
     
@@ -61,13 +62,23 @@ main {
     margin-bottom: 3.2rem;
     background: #E1E1E6;
     border-radius: 2.4rem;
-    border: 0;
+    border: none;
     cursor: pointer;
 }
 
 .Audios button:hover {
     background: #02799D;
 }
+
+.Audios .On {
+    background:  #02799D;
+
+}
+
+.buttons .On{
+    opacity: 0.5;
+}
+
 
 .Row-Up {
     display: flex;
@@ -80,67 +91,3 @@ main {
     gap: 3.2rem;
 }
 
-/* buttons Hide */
-
-.Floresta.Hide {
-    display: none;
-    visibility: hidden;
-}
-
-.Chuva.Hide {
-    display: none;
-    visibility: hidden;
-}
-
-.Cafeteria.Hide {
-    display: none;
-    visibility: hidden;
-}
-
-.Lareira.Hide {
-    display: none;
-    visibility: hidden;
-}
-
-/* buttons On */
-
-
-.FlorestaUse.On{
-    background: #02799D;
-    display: block;
-    visibility: visible;
-    
-}
-.ChuvaUse.On{
-    display: block;
-    visibility: visible;
-    background: #02799D;
-}
-.CafeteriaUse.On{
-    display: block;
-    visibility: visible;
-    background: #02799D;
-}
-.LareiraUse.On{
-    display: block;
-    visibility: visible;
-    background: #02799D;
-}
-
-/* Buttons Off */
-.FlorestaUse{
-    display: none;
-    visibility: hidden;
-}
-.ChuvaUse{
-    display: none;
-    visibility: hidden;
-}
-.CafeteriaUse{
-    display: none;
-    visibility: hidden;
-}
-.LareiraUse{
-    display: none;
-    visibility: hidden;
-}

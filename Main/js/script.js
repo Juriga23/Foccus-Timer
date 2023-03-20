@@ -16,36 +16,17 @@ let CafeteriaUse = document.querySelector('.CafeteriaUse')
 let LareiraUse = document.querySelector('.LareiraUse')
 let Minutes = 0
 let Seconds = 0
-let cron;
 
-const Audio = Audios({
-    Floresta,
-    Chuva,
-    Cafeteria,
-    Lareira,
-    LareiraUse,
-    ChuvaUse,
-    FlorestaUse,
-    CafeteriaUse
-})
+const Audio = Audios()
 
 const Buttons = ButtonControls({
     Play,
-    cron,
+    Stop,
     Seconds,
     Minutes,
     SecondsDisplay,
-    Sum,
-    Less,
-    Stop,
-    UpdateDisplay
+    MinutesDisplay
 })
-
-UpdateDisplay(Minutes, Seconds)
-function UpdateDisplay (Minutes, Seconds) {
-    MinutesDisplay.textContent = String(Minutes).padStart(2, '0')
-    SecondsDisplay.textContent = String(Seconds).padStart(2, '0')
-}
 
 
 Sum.onclick = () => Buttons.SumFunction()
@@ -56,19 +37,52 @@ Play.onclick = () => Buttons.countTime()
 
 Stop.onclick = () => Buttons.StopFunction()
 
-Floresta.onclick = () => Audio.FlorestaAudio.On()
 
-Chuva.onclick = () => Audio.ChuvaAudio.On()
+Floresta.onclick = () => {
+    const SoundOn = Floresta.classList.contains('On')
+    
+    if(SoundOn) {
+        Floresta.classList.remove('On')
+        Audio.FlorestaAudio.Off()
+    }else{
+        Floresta.classList.add('On')
+        Audio.FlorestaAudio.On()
+    }
+}
 
-Cafeteria.onclick = () => Audio.CafeteriaAudio.On()
+Chuva.onclick = () => {
+    const SoundOn = Chuva.classList.contains('On')
+    
+    if(SoundOn) {
+        Chuva.classList.remove('On')
+        Audio.ChuvaAudio.Off()
+    }else{
+        Chuva.classList.add('On')
+        Audio.ChuvaAudio.On()
+    }
+}
 
-Lareira.onclick = () => Audio.LareiraAudio.On()
+Cafeteria.onclick = () => {
+    const SoundOn = Cafeteria.classList.contains('On')
+    
+    if(SoundOn) {
+        Cafeteria.classList.remove('On')
+        Audio.CafeteriaAudio.Off()
+    }else{
+        Cafeteria.classList.add('On')
+        Audio.CafeteriaAudio.On()
+    }
+}
 
-LareiraUse.onclick = () => Audio.LareiraAudio.Off()
-
-CafeteriaUse.onclick = () => Audio.CafeteriaAudio.Off()
-
-ChuvaUse.onclick = () => Audio.ChuvaAudio.Off()
-
-FlorestaUse.onclick = () => Audio.FlorestaAudio.Off()
+Lareira.onclick = () => {
+    const SoundOn = Lareira.classList.contains('On')
+    
+    if(SoundOn) {
+        Lareira.classList.remove('On')
+        Audio.LareiraAudio.Off()
+    }else{
+        Lareira.classList.add('On')
+        Audio.LareiraAudio.On()
+    }
+}
 
