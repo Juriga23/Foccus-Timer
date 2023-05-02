@@ -13,7 +13,7 @@ Clone o projeto
   git clone https://github.com/gabrielbarros23/Foccus-Timer
 ```
 
-Intale a Extensão LiveServer
+Instale a Extensão LiveServer
 
 ```bash
   https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
